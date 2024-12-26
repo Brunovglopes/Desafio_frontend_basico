@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'RobotoBold';
+    src: url(../assets/fonts/Roboto-Bold.ttf) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Regular.ttf) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    color: rgba(35, 39, 66, 255);
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body,
+html {
+    display: flex;
+    background-color: rgba(54, 56, 77, 255);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-radius: 20px;
+    width: 65vw;
+    height: 70vh;
+    background-color: white;
+    box-shadow: 2px 2px 50px black;
+}
+
+/*Formulario*/
+.formulario {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.container-text {
+    text-align: justify;
+    padding: 0% 10%;
+}
+
+.call {
+    padding-top: 12%;
+    padding-bottom: 3%;
+    font-size:39pt;
+    font-family: 'RobotoBold';
+    text-align: center;
+}
+
+.text {
+    font-size: 14pt;
+    margin-bottom: 5%;
+}
+
+.answer {
+    display: block;
+    height: 15%;
+}
+
+.answer ul {
+    padding-left: 10%;
+}
+
+.fa-check-circle {
+    padding-right: 10px;
+    color: rgba(248, 98, 89, 255);
+}
+
+li {
+    padding: 1% 0 1% 0;
+    font-size: 12pt;
+    list-style: none;
+}
+
+/*Container input*/
+label {
+    font-size: 10pt;
+    font-family: RobotoBold;
+
+}
+
+.container_input {
+    padding: 10% 10% 0% 10%;
+}
+
+.login {
+    border: 0.5px;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 2% 0%;
+    width: 100%;
+    height: 35px;
+    border-color: rgb(219, 217, 217);
+
+}
+
+button {
+    width: 102%;
+    height: 40px;
+    background-color: rgba(35, 39, 66, 255);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 2%;
+
+}
+
+button:hover {
+    background: rgb(255, 84, 120);
+    background: linear-gradient(239deg, rgba(255, 84, 120, 1) 1%, rgba(255, 103, 66, 1) 100%);
+
+}
+
+/*imagem*/
+
+.call_image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image {
+    width: 90%;
+    height: 92%;
+
+    border-radius: 20px;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.faled {
+    border-color: red;
+    color: red;
+}
+
+.faled::placeholder {
+    color: red;
+}
+
+.faled_text {
+
+    font-size: 8pt;
+    text-align: right;
+
+}
+
+.msg {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 710px) {
+
+    main {
+        border-radius: 0px;
+        display: grid;
+        grid-template-rows: 35% auto;
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .call_image {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+
+    }
+
+    .formulario {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .image {
+        width: 100vw;
+        height: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+        background-position: center center;
+    }
+    button {
+       margin: 5% 0%;
+    
+    }
+    
+}@media only screen and (max-width: 400px){
+    .call {
+        padding-top: 10%;
+        padding-bottom: 3%;
+        font-size: 35pt;
+        
+    }
+    }
